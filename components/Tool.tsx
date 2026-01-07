@@ -170,47 +170,48 @@ const Tool: React.FC = () => {
                             </ul>
                         </div>
 
-                        {/* Competitor Vulnerability */}
-                         <div className="bg-brand-black text-white p-6 relative overflow-hidden rounded-sm">
-                             <div className="mb-2 border-b border-brand-gold/20 pb-2">
-                                <p className="font-mono text-[10px] text-brand-red uppercase tracking-widest mb-1">Competitor Vulnerability Detected</p>
-                                <p className="font-serif italic text-sm leading-relaxed text-white">
-                                    "{state.result.competitorVulnerability}"
-                                </p>
-                             </div>
+                        {/* Video Hooks (New) */}
+                        <div>
+                           <h4 className="font-sans font-bold text-sm uppercase tracking-widest border-b border-gray-200 pb-2 mb-4">Content Production Plan</h4>
+                           <div className="space-y-4">
+                              <div>
+                                <p className="font-mono text-xs text-brand-green uppercase mb-1">Search Intercept Hooks</p>
+                                <ul className="list-disc list-inside text-sm text-gray-600 font-medium">
+                                  {state.result.searchInterceptHooks.map((hook, i) => (
+                                    <li key={i}>"{hook}"</li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <div>
+                                <p className="font-mono text-xs text-brand-gold uppercase mb-1">Objection Crushers</p>
+                                <ul className="list-disc list-inside text-sm text-gray-600">
+                                  {state.result.objectionCrushers.map((objection, i) => (
+                                    <li key={i}>{objection}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                           </div>
                         </div>
 
-                        {/* Founder Story Script (New Feature) */}
-                        <div>
+                        {/* Founder Story Script (Script Format) */}
+                        <div className="bg-white border border-gray-200 p-6 shadow-sm">
                             <div className="flex justify-between items-end border-b border-gray-200 pb-2 mb-4">
-                                <h4 className="font-sans font-bold text-sm uppercase tracking-widest">Founder Origin Script</h4>
-                                <span className="font-mono text-[10px] bg-brand-green text-white px-2 py-0.5 rounded-full">RECOMMENDED</span>
+                                <h4 className="font-mono font-bold text-sm uppercase tracking-widest">Founder_Origin_Script.pdf</h4>
+                                <span className="font-mono text-[10px] bg-brand-black text-white px-2 py-0.5 rounded-sm">FINAL DRAFT</span>
                             </div>
                             
-                            <div className="space-y-4">
-                                {/* Act 1: Hook */}
-                                <div className="flex gap-4">
-                                    <div className="w-8 flex-shrink-0 text-xs font-mono font-bold text-gray-400 pt-1">01</div>
-                                    <div>
-                                        <span className="text-[10px] font-mono text-brand-red uppercase tracking-wider block mb-1">The Hook</span>
-                                        <p className="font-serif text-lg leading-tight text-brand-black">"{state.result.founderStory.hook}"</p>
-                                    </div>
+                            <div className="space-y-6 font-mono text-sm text-brand-black leading-relaxed">
+                                <div>
+                                    <p className="font-bold underline mb-1 uppercase">01. INT. THE HOOK - DAY</p>
+                                    <p className="pl-4 border-l-2 border-gray-200 text-gray-600">"{state.result.founderStory.hook}"</p>
                                 </div>
-                                {/* Act 2: Conflict */}
-                                <div className="flex gap-4">
-                                    <div className="w-8 flex-shrink-0 text-xs font-mono font-bold text-gray-400 pt-1">02</div>
-                                    <div>
-                                        <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider block mb-1">The Conflict</span>
-                                        <p className="font-sans text-sm text-gray-600 leading-relaxed">{state.result.founderStory.conflict}</p>
-                                    </div>
+                                <div>
+                                    <p className="font-bold underline mb-1 uppercase">02. THE CONFLICT</p>
+                                    <p className="pl-4 border-l-2 border-gray-200 text-gray-600">{state.result.founderStory.conflict}</p>
                                 </div>
-                                {/* Act 3: Resolution */}
-                                <div className="flex gap-4">
-                                    <div className="w-8 flex-shrink-0 text-xs font-mono font-bold text-gray-400 pt-1">03</div>
-                                    <div>
-                                        <span className="text-[10px] font-mono text-brand-green uppercase tracking-wider block mb-1">The Resolution</span>
-                                        <p className="font-sans text-sm text-gray-600 leading-relaxed">{state.result.founderStory.resolution}</p>
-                                    </div>
+                                <div>
+                                    <p className="font-bold underline mb-1 uppercase">03. THE RESOLUTION (AHA MOMENT)</p>
+                                    <p className="pl-4 border-l-2 border-gray-200 text-gray-600">{state.result.founderStory.resolution}</p>
                                 </div>
                             </div>
                         </div>

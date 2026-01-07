@@ -5,7 +5,7 @@ This is the official repository for [www.authentikstudio.com](https://www.authen
 **Current Strategy:** "Burn The Boats" (Profit Defense & Founder Stories).
 
 ## Repository
-**URL:** `https://github.com/Eurmthewurm/authentikstudio_foundersignal.git`
+**URL:** `https://github.com/Eurmthewurm/Authentik-Studio-2026-amazon.git`
 
 ## Tech Stack
 - **Framework:** React 19
@@ -14,10 +14,10 @@ This is the official repository for [www.authentikstudio.com](https://www.authen
 
 ## 🚀 Deployment Guide (Vercel)
 
-1. **Push code to GitHub** (`authentikstudio_foundersignal`).
+1. **Push code to GitHub** (`Authentik-Studio-2026-amazon`).
 2. **Go to [Vercel.com](https://vercel.com) and Log in.**
 3. **Add New Project:**
-   - Import `authentikstudio_foundersignal`.
+   - Import `Authentik-Studio-2026-amazon`.
 4. **Environment Variables (Required):**
    - Go to "Environment Variables" in the deploy settings.
    - Key: `API_KEY`
@@ -32,7 +32,7 @@ This is the official repository for [www.authentikstudio.com](https://www.authen
 
 ## Local Development
 1. Clone the repo:
-   `git clone https://github.com/Eurmthewurm/authentikstudio_foundersignal.git`
+   `git clone https://github.com/Eurmthewurm/Authentik-Studio-2026-amazon.git`
 2. Create `.env`:
    `API_KEY=your_key_here`
 3. Install & Run:
