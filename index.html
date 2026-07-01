@@ -1,87 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Authentik Studio Amazon 2026: The Profit Defense Agency. We help Amazon brands Burn The Boats with Founder Origin Stories and Search Intercept content." />
-    <meta property="og:title" content="Authentik Studio Amazon 2026" />
-    <meta property="og:description" content="Your product is a commodity. Your story is the monopoly. We help best-selling Amazon brands burn the boats and capture premium margins." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.authentikstudio.com" />
-    
-    <title>Authentik Studio Amazon 2026</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              sans: ['Inter', 'sans-serif'],
-              mono: ['"Roboto Mono"', 'monospace'],
-            },
-            colors: {
-              'brand-black': '#121212',
-              'brand-cream': '#F5F5F0',
-              'brand-gold': '#D4AF37',
-              'brand-green': '#1A4D2E',
-              'brand-red': '#C83E3E',
-              'paper': '#F0F0EB',
-            },
-            animation: {
-              'ticker': 'ticker 30s linear infinite',
-              'typewriter': 'typewriter 2s steps(40, end) 1s 1 normal both',
-              'blink': 'blink 1s step-end infinite',
-            },
-            keyframes: {
-              ticker: {
-                '0%': { transform: 'translateX(0)' },
-                '100%': { transform: 'translateX(-100%)' },
-              },
-              typewriter: {
-                'from': { width: '0' },
-                'to': { width: '100%' },
-              },
-              blink: {
-                'from, to': { borderColor: 'transparent' },
-                '50%': { borderColor: 'currentColor' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      body {
-        background-color: #F5F5F0;
-        color: #121212;
-      }
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Authentik Studio — Documentary films for essential industries</title>
+<meta name="description" content="Broadcast-standard documentary films for aged care, health, and the essential industries that keep society running. Shot on location, made to show the work as it really is.">
+<meta property="og:title" content="Authentik Studio">
+<meta property="og:description" content="Documentary films for essential industries. Broadcast craft: BBC, Apple TV+, National Geographic, Discovery.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14110d; --paper:#f3efe7; --ink:#1b1813; --ink-soft:#2c261d;
+    --cream:#ece7dd; --accent:#9a7c5a; --hero-ov:0.42;
   }
-}
-</script>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg)}
+  body{font-family:'Geist',-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased;color:var(--ink);overflow-x:hidden}
+  ::selection{background:var(--accent);color:#fff}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+  .serif{font-family:'Newsreader',Georgia,serif;font-weight:400}
+  .mono{font-family:'Geist Mono',monospace}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes kenburns{0%{transform:translate(-50%,-50%) scale(1.02)}100%{transform:translate(-50%,-50%) scale(1.14)}}
+
+  /* scroll progress */
+  .progress{position:fixed;top:0;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:var(--accent);z-index:90;opacity:.9}
+
+  /* grain */
+  .grain{position:fixed;inset:0;pointer-events:none;z-index:80;opacity:.06;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='140'%20height='140'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.9'%20numOctaves='2'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E");}
+  /* HUD corner ticks */
+  .hud{position:fixed;inset:0;z-index:70;pointer-events:none;mix-blend-mode:difference}
+  .hud span{position:absolute;width:18px;height:18px}
+  .hud .tl{top:22px;left:22px;border-top:1px solid rgba(255,255,255,.55);border-left:1px solid rgba(255,255,255,.55)}
+  .hud .tr{top:22px;right:22px;border-top:1px solid rgba(255,255,255,.55);border-right:1px solid rgba(255,255,255,.55)}
+  .hud .bl{bottom:22px;left:22px;border-bottom:1px solid rgba(255,255,255,.55);border-left:1px solid rgba(255,255,255,.55)}
+  .hud .br{bottom:22px;right:22px;border-bottom:1px solid rgba(255,255,255,.55);border-right:1px solid rgba(255,255,255,.55)}
+  /* rail */
+  .rail{position:fixed;left:clamp(20px,2vw,34px);top:50%;transform:translateY(-50%);z-index:72;display:flex;flex-direction:column;gap:15px;mix-blend-mode:difference}
+  .rail a{display:flex;align-items:center;gap:8px;text-decoration:none;opacity:.4;transition:opacity .4s ease}
+  .rail a.on{opacity:1}
+  .rail .tick{display:block;width:0;height:1px;background:#fff;transition:width .45s cubic-bezier(.22,.61,.18,1)}
+  .rail a.on .tick{width:14px}
+  .rail .num{font-family:'Geist Mono',monospace;font-size:.66rem;letter-spacing:.1em;color:#fff}
+  @media (max-width:1100px){.rail{display:none}}
+
+  /* custom cursor (desktop, pointer only) */
+  .cursor{position:fixed;top:0;left:0;width:34px;height:34px;border:1px solid rgba(255,255,255,.6);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:95;mix-blend-mode:difference;transition:width .25s ease,height .25s ease,background .25s ease,opacity .3s ease;opacity:0}
+  .cursor.show{opacity:1}
+  .cursor.hot{width:64px;height:64px;background:rgba(255,255,255,.14)}
+  @media (hover:none),(max-width:820px){.cursor{display:none}}
+
+  /* layout helpers */
+  .wrap{max-width:1280px;margin:0 auto}
+  .section{padding:clamp(96px,15vh,200px) clamp(28px,7vw,120px);background:var(--paper);border-top:1px solid rgba(27,24,19,.1)}
+  .grid{display:grid;grid-template-columns:minmax(120px,18%) 1fr;gap:clamp(28px,5vw,80px)}
+  @media (max-width:820px){.grid{grid-template-columns:1fr;gap:8px}}
+  .marg{position:sticky;top:clamp(90px,12vh,140px);align-self:start}
+  @media (max-width:820px){.marg{position:static;margin-bottom:14px}}
+  .marg .n{font-family:'Newsreader',Georgia,serif;font-size:clamp(1.7rem,2.8vw,2.5rem);line-height:1;color:var(--accent)}
+  .marg .l{margin-top:14px;font-family:'Geist Mono',monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#3a342b;font-weight:500}
+  .marg .r{margin-top:18px;width:28px;height:1px;background:rgba(27,24,19,.25)}
+  p{margin:0}
+  .lede{font-size:1.24rem;line-height:1.74;color:var(--ink-soft)}
+  @media (max-width:560px){.lede{font-size:1.12rem}}
+
+  /* animated link underline */
+  .ul{position:relative;text-decoration:none;padding-bottom:4px;background-image:linear-gradient(var(--accent),var(--accent));background-size:0% 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .45s cubic-bezier(.22,.61,.18,1),color .35s ease}
+  .ul:hover{background-size:100% 1px;color:var(--accent)}
+
+  /* line/word reveal machinery */
+  .line{display:block;overflow:hidden}
+  .word{display:inline-block;white-space:pre}
+
+  /* Motion states applied ONLY when JS enhancement is active.
+     Without JS or on failure, everything is fully visible. */
+  .enh [data-reveal]{opacity:0;transform:translateY(30px)}
+  .enh [data-img] img{transform:scale(1.16)}
+  .enh [data-img]{clip-path:inset(0 0 100% 0)}
+  .enh .word{transform:translateY(112%)}
+  @media (prefers-reduced-motion:reduce){
+    .enh [data-reveal],.enh [data-img],.enh [data-img] img,.enh .word{opacity:1!important;transform:none!important;clip-path:none!important}
+  }
+</style>
 </head>
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: This line is required for Vite to load your app -->
-    <script type="module" src="/index.tsx"></script>
-  </body>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="hud" aria-hidden="true"><span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<nav class="rail" aria-label="Sections" id="rail">
+  <a href="#top" class="on"><span class="tick"></span><span class="num">01</span></a>
+  <a href="#why"><span class="tick"></span><span class="num">02</span></a>
+  <a href="#what"><span class="tick"></span><span class="num">03</span></a>
+  <a href="#how"><span class="tick"></span><span class="num">04</span></a>
+  <a href="#team"><span class="tick"></span><span class="num">05</span></a>
+  <a href="#work"><span class="tick"></span><span class="num">06</span></a>
+  <a href="#contact"><span class="tick"></span><span class="num">07</span></a>
+</nav>
+
+<!-- HEADER -->
+<header style="position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:clamp(22px,3.4vw,40px) clamp(28px,7vw,140px)">
+  <a href="#top" class="mono" style="font-size:.74rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--cream);text-decoration:none">Authentik&nbsp;Studio</a>
+  <a href="#contact" class="mono ul" style="font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#bdb5a8">Contact</a>
+</header>
+
+<!-- 1. HERO — minimal text; the film carries it -->
+<section id="top" data-section style="position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#0e0b07">
+  <h1 class="sr-only">Authentik Studio — documentary films for aged care, health, and the essential industries that keep society running.</h1>
+  <div id="heroMedia" aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(125% 110% at 68% 22%,#211a12 0%,#140f0a 55%,#0a0805 100%)">
+    <iframe title="John W. Sullivan showreel" src="https://player.vimeo.com/video/901343199?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:max(100vw,calc(100vh * 16 / 9));height:max(100vh,calc(100vw * 9 / 16));border:0;pointer-events:none;animation:kenburns 26s ease-in-out infinite alternate"></iframe>
+  </div>
+  <div aria-hidden="true" style="position:absolute;inset:0;background:#0a0806;opacity:var(--hero-ov)"></div>
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.62) 0%,rgba(0,0,0,0) 34%),linear-gradient(to bottom,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 24%)"></div>
+  <div aria-hidden="true" style="position:absolute;inset:0;box-shadow:inset 0 0 240px 60px rgba(0,0,0,.5)"></div>
+
+  <!-- reel caption, understated (links to full reel) -->
+  <a id="heroCap" href="https://vimeo.com/901343199" target="_blank" rel="noopener" class="mono" style="position:absolute;top:clamp(86px,11vw,128px);right:clamp(28px,7vw,140px);z-index:6;text-align:right;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,231,221,.6);line-height:1.9;text-decoration:none">
+    <span style="display:inline-flex;align-items:center;gap:7px"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2.4s ease-in-out infinite"></span>Now playing</span><br>Showreel · John W. Sullivan
+  </a>
+
+  <!-- bottom line: brand credits + scroll cue only -->
+  <div id="heroBottom" style="position:absolute;bottom:clamp(28px,4vw,52px);left:0;right:0;z-index:6;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding:0 clamp(28px,7vw,140px)">
+    <p class="mono" style="font-size:clamp(.66rem,1vw,.76rem);letter-spacing:.14em;text-transform:uppercase;color:rgba(236,231,221,.62)">Broadcast&nbsp;craft&nbsp;&nbsp;·&nbsp;&nbsp;BBC&nbsp;&nbsp;·&nbsp;&nbsp;Apple&nbsp;TV+&nbsp;&nbsp;·&nbsp;&nbsp;National&nbsp;Geographic&nbsp;&nbsp;·&nbsp;&nbsp;Discovery</p>
+    <a href="#why" class="mono" style="display:flex;align-items:center;gap:10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(236,231,221,.5);white-space:nowrap;text-decoration:none">Scroll <span style="display:inline-block;width:40px;height:1px;background:rgba(236,231,221,.5);overflow:hidden"><span style="display:block;width:100%;height:100%;background:var(--accent);animation:scrollcue 2.2s ease-in-out infinite"></span></span></a>
+  </div>
+</section>
+
+<!-- 2. WHY THIS WORK -->
+<section id="why" data-section class="section" style="border-top:0">
+  <div class="wrap grid">
+    <div class="marg"><div class="n">02</div><div class="l">Why this work</div><div class="r"></div></div>
+    <div>
+      <p class="serif" data-lines style="max-width:22ch;font-size:clamp(1.9rem,4.2vw,3.4rem);line-height:1.14;letter-spacing:-.018em;color:var(--ink);text-wrap:balance">The proof of good work in an essential industry lives in moments a brochure can&rsquo;t hold.</p>
+      <div style="display:grid;grid-template-columns:1fr;gap:clamp(36px,4vw,56px);align-items:start;margin-top:clamp(40px,5vw,64px)">
+        <div style="max-width:60ch;padding-left:clamp(0px,2vw,28px);border-left:1px solid rgba(27,24,19,.16)">
+          <p class="lede" data-reveal>The way a carer speaks to a resident. The standard held on a quiet night shift. The reason someone has stayed for twenty years.</p>
+          <p class="lede" data-reveal style="margin-top:1.4em">When that work stays invisible, two things follow. The right people don&rsquo;t apply, because they can&rsquo;t see what they&rsquo;d be joining. And the organisation gets judged on the same generic terms as everyone else, no matter how much better it actually is.</p>
+          <p class="lede" data-reveal style="margin-top:1.4em">A film changes both. It shows the work as it is, which is the strongest reputation and recruitment asset an essential organisation has, and the one almost no one bothers to capture properly.</p>
+        </div>
+        <figure style="margin:0">
+          <div data-img style="position:relative;aspect-ratio:16/10;width:100%;overflow:hidden;background:#0e0b07;border:1px solid rgba(27,24,19,.18)">
+            <img src="https://www.authentikstudio.com/bc02b6b2-56a6-4316-b8ed-1586242cc000.jpeg" alt="On location with the Authentik Studio crew" loading="lazy" style="width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.04) brightness(.96)">
+            <span class="mono" style="position:absolute;top:14px;left:14px;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(236,231,221,.82)">On location</span>
+          </div>
+        </figure>
+      </div>
+      <p class="serif" data-lines style="margin-top:clamp(52px,7vw,96px);font-style:italic;font-size:clamp(1.6rem,3.2vw,2.7rem);line-height:1.2;letter-spacing:-.01em;color:var(--ink)">We make that asset.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. WHAT WE MAKE -->
+<section id="what" data-section class="section">
+  <div class="wrap grid">
+    <div class="marg"><div class="n">03</div><div class="l">What we make</div><div class="r"></div></div>
+    <div>
+      <h2 class="serif" data-lines style="margin:0;max-width:20ch;font-size:clamp(1.7rem,3.4vw,2.9rem);line-height:1.16;letter-spacing:-.016em;color:var(--ink)">We make documentary films that change how an organisation is seen.</h2>
+      <p class="lede" data-reveal style="margin-top:1.5em;max-width:56ch">For essential industries that usually starts with recruitment: we tell the real story of the work, so the right people apply. The same film keeps working long after, as the reputation asset that makes an organisation trusted by families, partners, and regulators alike.</p>
+      <p class="lede" data-reveal style="margin-top:1.3em;max-width:56ch">This is not corporate video. Every film is shot on location, built around a deliberate narrative, and made to a standard competitors cannot replicate, because they weren&rsquo;t there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. HOW IT WORKS -->
+<section id="how" data-section class="section">
+  <div class="wrap grid">
+    <div class="marg"><div class="n">04</div><div class="l">How it works</div><div class="r"></div></div>
+    <div>
+      <div data-reveal style="display:grid;grid-template-columns:minmax(0,3.5ch) minmax(0,1fr);gap:clamp(18px,3vw,56px);align-items:baseline;padding:clamp(24px,3.4vw,44px) 0;border-top:1px solid rgba(27,24,19,.14)">
+        <span class="serif" style="font-size:clamp(1.3rem,2.4vw,2rem);color:var(--accent)">01</span>
+        <div style="max-width:60ch">
+          <h3 class="serif" style="margin:0;font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.18;letter-spacing:-.012em;color:var(--ink)">We start with the story, not the camera.</h3>
+          <p class="lede" style="margin-top:1em">Every project opens with a working session to understand the organisation, the people, and what the film actually needs to do. The narrative is shaped before a frame is shot.</p>
+        </div>
+      </div>
+      <div data-reveal style="display:grid;grid-template-columns:minmax(0,3.5ch) minmax(0,1fr);gap:clamp(18px,3vw,56px);align-items:baseline;padding:clamp(24px,3.4vw,44px) 0;border-top:1px solid rgba(27,24,19,.14)">
+        <span class="serif" style="font-size:clamp(1.3rem,2.4vw,2rem);color:var(--accent)">02</span>
+        <div style="max-width:60ch">
+          <h3 class="serif" style="margin:0;font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.18;letter-spacing:-.012em;color:var(--ink)">We come to you.</h3>
+          <p class="lede" style="margin-top:1em">We film on location: facilities, sites, the real operation. A broadcast-trained crew, led to John W. Sullivan&rsquo;s standard. The story gets told where it actually happens.</p>
+        </div>
+      </div>
+      <div data-reveal style="display:grid;grid-template-columns:minmax(0,3.5ch) minmax(0,1fr);gap:clamp(18px,3vw,56px);align-items:baseline;padding:clamp(24px,3.4vw,44px) 0;border-top:1px solid rgba(27,24,19,.14);border-bottom:1px solid rgba(27,24,19,.14)">
+        <span class="serif" style="font-size:clamp(1.3rem,2.4vw,2rem);color:var(--accent)">03</span>
+        <div style="max-width:60ch">
+          <h3 class="serif" style="margin:0;font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.18;letter-spacing:-.012em;color:var(--ink)">We shape it into a film.</h3>
+          <p class="lede" style="margin-top:1em">Full post-production: edit, colour grade, audio design. A deliberate narrative arc, not a highlight reel. Delivered as a full documentary plus the cuts you need to put it to work.</p>
+        </div>
+      </div>
+      <p data-reveal class="serif" style="margin-top:clamp(40px,4vw,56px);font-style:italic;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.6;color:#453f38">Typical delivery: one full documentary, a LinkedIn cut, short-form cuts, and a teaser. Scoped per project.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. THE TEAM -->
+<section id="team" data-section class="section">
+  <div class="wrap grid">
+    <div class="marg"><div class="n">05</div><div class="l">The team</div><div class="r"></div></div>
+    <div>
+      <p data-lines class="serif" style="margin:0;max-width:30ch;font-size:clamp(1.6rem,3.2vw,2.6rem);line-height:1.18;letter-spacing:-.014em;color:var(--ink);text-wrap:balance">Two people lead every project. No account managers, no handoffs, no context lost between calls.</p>
+
+      <div style="margin-top:clamp(48px,6vw,88px);display:flex;flex-direction:column;gap:clamp(52px,7vw,96px)">
+        <!-- Ermo first (founder) -->
+        <div class="member" style="display:grid;grid-template-columns:minmax(0,38%) 1fr;gap:clamp(28px,4vw,64px);align-items:start">
+          <div data-img style="position:relative;aspect-ratio:4/5;width:100%;overflow:hidden;background:#0e0b07;border:1px solid rgba(27,24,19,.2)">
+            <img src="https://www.authentikstudio.com/ee2%20(1%20of%201).jpg" alt="Ermo Egberts" loading="lazy" style="width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(.95)">
+            <span class="mono" style="position:absolute;top:14px;left:14px;z-index:3;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(236,231,221,.78);pointer-events:none">A. Studio / 01</span>
+          </div>
+          <div data-reveal style="padding-top:6px">
+            <h3 class="serif" style="margin:0;font-size:clamp(1.7rem,2.8vw,2.5rem);letter-spacing:-.014em;color:var(--ink)">Ermo Egberts</h3>
+            <p class="mono" style="margin:12px 0 0;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)">Founder &amp; Creative Director</p>
+            <p class="lede" style="margin:1.4em 0 0;max-width:48ch">Founder of Authentik Studio. Leads creative direction, producing, and the edit, and shapes the story from first conversation to final cut.</p>
+          </div>
+        </div>
+        <!-- John -->
+        <div class="member" style="display:grid;grid-template-columns:minmax(0,38%) 1fr;gap:clamp(28px,4vw,64px);align-items:start">
+          <div data-img style="position:relative;aspect-ratio:4/5;width:100%;overflow:hidden;background:#0e0b07;border:1px solid rgba(27,24,19,.2)">
+            <img src="https://www.authentikstudio.com/7c7c58d9-4b00-4c0f-a331-2e74403a1959.jpeg" alt="John W. Sullivan" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:grayscale(1) contrast(1.05) brightness(.95)">
+            <span class="mono" style="position:absolute;top:14px;left:14px;z-index:3;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(236,231,221,.78);pointer-events:none">A. Studio / 02</span>
+          </div>
+          <div data-reveal style="padding-top:6px">
+            <h3 class="serif" style="margin:0;font-size:clamp(1.7rem,2.8vw,2.5rem);letter-spacing:-.014em;color:var(--ink)">John W. Sullivan</h3>
+            <p class="mono" style="margin:12px 0 0;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)">Head of Production</p>
+            <p class="lede" style="margin:1.4em 0 0;max-width:48ch">Fifteen years shooting for the BBC, Apple TV+, and National Geographic. He sets the visual standard on location and holds every crew we deploy to it.</p>
+            <p class="mono" style="margin:1.5em 0 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#5a5147;line-height:1.9">Broadcast credits · BBC · Apple&nbsp;TV+ · National&nbsp;Geographic · Discovery</p>
+          </div>
+        </div>
+      </div>
+
+      <p data-reveal style="margin-top:clamp(48px,6vw,80px);max-width:64ch;font-size:1.075rem;line-height:1.74;color:var(--ink-soft)">Around this senior core we build a dedicated, broadcast-trained crew for each production, so every project gets experienced leadership and the right team for the job. Our network operates worldwide. Wherever the work is, we can be there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. SELECTED WORK -->
+<section id="work" data-section class="section" style="padding-left:0;padding-right:0">
+  <div class="wrap grid" style="padding:0 clamp(28px,7vw,120px)">
+    <div class="marg"><div class="n">06</div><div class="l">Selected work</div><div class="r"></div></div>
+    <div>
+      <p class="serif" data-lines style="margin:0;max-width:28ch;font-size:clamp(1.5rem,3vw,2.4rem);line-height:1.2;letter-spacing:-.014em;color:var(--ink);text-wrap:balance">Our work and our network&rsquo;s credits span the broadcasters and brands below.</p>
+      <p class="serif" data-reveal style="margin-top:1.4em;max-width:54ch;font-style:italic;font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.6;color:#453f38">Currently in production: recruitment and workforce documentaries in the aged-care sector.</p>
+    </div>
+  </div>
+
+  <!-- credits marquee -->
+  <div style="margin-top:clamp(56px,7vw,96px);overflow:hidden;border-top:1px solid rgba(27,24,19,.12);border-bottom:1px solid rgba(27,24,19,.12);padding:clamp(26px,3vw,42px) 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)">
+    <div id="marquee" style="display:flex;width:max-content;gap:clamp(40px,6vw,92px);align-items:center;animation:marquee 55s linear infinite;will-change:transform"></div>
+  </div>
+
+  <!-- proof block -->
+  <div class="proof" style="max-width:1280px;margin:clamp(96px,12vw,150px) auto 0;padding:0 clamp(28px,7vw,120px);display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,80px);align-items:center">
+    <div data-reveal>
+      <p class="mono" style="margin:0 0 clamp(24px,3vw,36px);font-size:.74rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">Proof our films drive real outcomes</p>
+      <h3 class="serif" data-lines style="margin:0;max-width:16ch;font-size:clamp(1.8rem,3.6vw,3rem);line-height:1.1;letter-spacing:-.018em;color:var(--ink)">From $2M to $8M in eighteen months.</h3>
+      <p class="lede" style="margin:1.5em 0 0;max-width:48ch">We have made films that drove serious business outcomes. One founder documentary helped move a brand from $2M to $8M in eighteen months, generating more than 2,300 qualified applications.</p>
+    </div>
+    <div data-img>
+      <div style="position:relative;aspect-ratio:16/9;width:100%;background:#0e0b07;border:1px solid rgba(27,24,19,.16);overflow:hidden">
+        <iframe title="J-Griff testimonial" src="https://player.vimeo.com/video/1112128628?h=34f346971c&dnt=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+      </div>
+      <p class="mono" style="margin:16px 0 0;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#5a5147">J-Griff · founder documentary · client testimonial</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CONTACT -->
+<section id="contact" data-section style="background:var(--bg);padding:clamp(120px,18vh,230px) clamp(28px,7vw,120px) clamp(80px,10vh,120px)">
+  <div class="wrap grid">
+    <div class="marg"><div class="n" style="color:var(--accent)">07</div><div class="l" style="color:rgba(236,231,221,.82)">Contact</div><div class="r" style="background:rgba(236,231,221,.28)"></div></div>
+    <div>
+      <h2 class="serif" data-lines style="margin:0;max-width:18ch;font-size:clamp(2.4rem,5.6vw,5.4rem);line-height:1.04;letter-spacing:-.02em;color:#f4efe5;text-wrap:balance">Work that deserves to be seen properly.</h2>
+      <p data-reveal style="margin:clamp(28px,3vw,40px) 0 0;max-width:50ch;font-size:clamp(1.18rem,1.5vw,1.34rem);line-height:1.62;color:rgba(236,231,221,.92)">If you run an organisation doing important work, let&rsquo;s talk. Thirty minutes. We&rsquo;ll tell you honestly whether we&rsquo;re the right fit.</p>
+      <div data-reveal style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(18px,2.4vw,32px);margin-top:clamp(40px,5vw,60px)">
+        <a data-book href="mailto:hello@authentikstudio.com" class="mono" style="display:inline-flex;align-items:center;justify-content:center;padding:18px 36px;background:#f4efe5;color:#14110d;font-size:.78rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:background .35s ease,color .35s ease" onmouseover="this.style.background='var(--accent)';this.style.color='#fff'" onmouseout="this.style.background='#f4efe5';this.style.color='#14110d'">Book a call</a>
+        <a data-book href="mailto:hello@authentikstudio.com" class="mono ul" style="display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--cream)">Email us</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:clamp(96px,12vw,160px);padding-top:clamp(32px,4vw,48px);border-top:1px solid rgba(236,231,221,.14);display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;justify-content:space-between">
+    <span class="mono" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,231,221,.5)">&copy; 2011&ndash;2026 Authentik Studio</span>
+    <span class="mono" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,231,221,.5)">Documentary films for essential industries</span>
+    <span class="mono" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,231,221,.36)">Site by Claude · art direction Ermo Egberts</span>
+  </div>
+</section>
+
+<style>
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+  @keyframes scrollcue{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+</style>
+
+<!-- Motion libraries (optional enhancement; page is fully functional without them) -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script>
+window.addEventListener('load', function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* ---- always-on: marquee, rail spy, cursor ---- */
+  var brands = ['BBC','National Geographic','Discovery','Apple TV+','Village Roadshow','Marvel','SBS','ARTE'];
+  var mq = document.getElementById('marquee');
+  if(mq){ var h=''; for(var p=0;p<2;p++){ brands.forEach(function(b){
+    h+='<span style="font-family:Geist,sans-serif;font-weight:500;font-size:clamp(1rem,1.8vw,1.45rem);letter-spacing:.05em;text-transform:uppercase;color:#9a917f;white-space:nowrap">'+b+'</span>';
+    h+='<span style="width:4px;height:4px;border-radius:50%;background:var(--accent);opacity:.6;flex:none"></span>'; }); } mq.innerHTML=h; }
+
+  function stack(){ var w=innerWidth;
+    document.querySelectorAll('.member').forEach(function(m){ m.style.gridTemplateColumns = w<720?'1fr':'minmax(0,38%) 1fr'; });
+    var pr=document.querySelector('.proof'); if(pr) pr.style.gridTemplateColumns = w<820?'1fr':'1.05fr .95fr'; }
+  stack(); addEventListener('resize', stack);
+
+  var sections=[].slice.call(document.querySelectorAll('[data-section]'));
+  var items=[].slice.call(document.querySelectorAll('#rail a'));
+  var prog=document.getElementById('progress');
+  function onScroll(){
+    var mid=innerHeight*0.35, active=0;
+    sections.forEach(function(s,i){ if(s.getBoundingClientRect().top<=mid) active=i; });
+    items.forEach(function(it,i){ it.classList.toggle('on', i===active); });
+    var max=document.documentElement.scrollHeight-innerHeight;
+    if(prog) prog.style.transform='scaleX('+(max>0?Math.min(scrollY/max,1):0)+')';
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // custom cursor
+  var cur=document.getElementById('cursor');
+  if(cur && matchMedia('(hover:hover)').matches){
+    var cx=innerWidth/2, cy=innerHeight/2, tx=cx, ty=cy;
+    addEventListener('mousemove', function(e){ tx=e.clientX; ty=e.clientY; cur.classList.add('show'); });
+    (function loop(){ cx+=(tx-cx)*.18; cy+=(ty-cy)*.18; cur.style.left=cx+'px'; cur.style.top=cy+'px'; requestAnimationFrame(loop); })();
+    document.querySelectorAll('a,button,[data-img],iframe').forEach(function(el){
+      el.addEventListener('mouseenter',function(){cur.classList.add('hot');});
+      el.addEventListener('mouseleave',function(){cur.classList.remove('hot');});
+    });
+  }
+
+  var GSAP = window.gsap, ST = window.ScrollTrigger, LENIS = window.Lenis;
+
+  /* ---- baseline reveal (used if GSAP failed) ---- */
+  function baselineReveal(){
+    var io=new IntersectionObserver(function(en){ en.forEach(function(e){ if(e.isIntersecting){ e.target.style.transition='opacity 1s cubic-bezier(.22,.61,.18,1),transform 1s cubic-bezier(.22,.61,.18,1)'; e.target.style.opacity='1'; e.target.style.transform='none'; io.unobserve(e.target);} }); },{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(28px)'; io.observe(el); });
+  }
+
+  if(!GSAP || !ST || reduce){ if(!reduce) baselineReveal(); return; }
+
+  // We can enhance — switch on motion states now (avoids FOUC / hidden-if-broken)
+  document.documentElement.classList.add('enh');
+  GSAP.registerPlugin(ST);
+
+  /* ---- Lenis smooth scroll wired to ScrollTrigger ---- */
+  if(LENIS){
+    var lenis=new LENIS({lerp:0.1, wheelMultiplier:1, smoothWheel:true});
+    lenis.on('scroll', ST.update);
+    GSAP.ticker.add(function(t){ lenis.raf(t*1000); });
+    GSAP.ticker.lagSmoothing(0);
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){ var t=document.querySelector(a.getAttribute('href')); if(t){ e.preventDefault(); lenis.scrollTo(t,{offset:0}); } });
+    });
+  }
+
+  /* ---- split [data-lines] into word masks ---- */
+  document.querySelectorAll('[data-lines]').forEach(function(el){
+    var words=el.textContent.trim().split(/\s+/);
+    el.textContent='';
+    words.forEach(function(w,i){
+      var line=document.createElement('span'); line.className='line';
+      var word=document.createElement('span'); word.className='word'; word.textContent=w+(i<words.length-1?' ':'');
+      line.appendChild(word); el.appendChild(line);
+    });
+    var words=el.querySelectorAll('.word');
+    GSAP.set(words,{yPercent:112});
+    GSAP.to(words,{yPercent:0,duration:1.05,ease:'expo.out',stagger:0.05,
+      scrollTrigger:{trigger:el,start:'top 82%'}});
+  });
+
+  /* ---- generic reveals ---- */
+  GSAP.utils.toArray('[data-reveal]').forEach(function(el){
+    GSAP.set(el,{opacity:0,y:30});
+    GSAP.to(el,{opacity:1,y:0,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+
+  /* ---- image wipe + scale ---- */
+  GSAP.utils.toArray('[data-img]').forEach(function(box){
+    var img=box.querySelector('img,iframe');
+    GSAP.set(box,{clipPath:'inset(0 0 100% 0)'});
+    GSAP.set(img,{scale:1.16});
+    var tl=GSAP.timeline({scrollTrigger:{trigger:box,start:'top 85%'}});
+    tl.to(box,{clipPath:'inset(0 0 0% 0)',duration:1.15,ease:'power3.out'})
+      .to(img,{scale:1,duration:1.5,ease:'power3.out'},0);
+    // gentle parallax on the media inside
+    GSAP.to(img,{yPercent:-8,ease:'none',scrollTrigger:{trigger:box,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+
+  /* ---- hero parallax + fade on scroll ---- */
+  var heroMedia=document.getElementById('heroMedia');
+  var heroBottom=document.getElementById('heroBottom');
+  var heroCap=document.getElementById('heroCap');
+  if(heroMedia){
+    GSAP.to(heroMedia,{yPercent:18,ease:'none',scrollTrigger:{trigger:'#top',start:'top top',end:'bottom top',scrub:true}});
+    GSAP.to([heroBottom,heroCap],{y:-40,opacity:0,ease:'none',scrollTrigger:{trigger:'#top',start:'top top',end:'70% top',scrub:true}});
+    // load-in of hero captions
+    GSAP.from([heroCap,heroBottom],{opacity:0,y:24,duration:1.2,ease:'power3.out',delay:0.25,stagger:0.15});
+  }
+
+  ST.refresh();
+});
+</script>
+</body>
 </html>
