@@ -2,6 +2,9 @@ UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, l
 REF="https://www.authentikstudio.com/"
 mkdir -p dist/assets
 cp index.html dist/index.html
+cp robots.txt dist/robots.txt || true
+cp sitemap.xml dist/sitemap.xml || true
+cp og.jpg dist/assets/og.jpg || true
 cp setup.mp4 dist/assets/setup.mp4 || true
 cp nurse.mp4 dist/assets/nurse.mp4 || true
 cp "john camera.jpeg" dist/assets/field1.jpg || true
