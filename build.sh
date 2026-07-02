@@ -2,6 +2,7 @@ UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, l
 REF="https://www.authentikstudio.com/"
 mkdir -p dist/assets
 cp index.html dist/index.html
+cp ermo_01.jpg dist/assets/ermo.jpg || true
 cp robots.txt dist/robots.txt || true
 cp sitemap.xml dist/sitemap.xml || true
 cp og.jpg dist/assets/og.jpg || true
