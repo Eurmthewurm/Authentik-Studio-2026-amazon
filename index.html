@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Authentik Studio — Documentary films for essential industries</title>
-<meta name="description" content="Broadcast-standard documentary films for aged care, health, and the essential industries that keep society running. Shot on location, made to show the work as it really is.">
+<title>Authentik Studio — Documentary films for the industries society runs on</title>
+<meta name="description" content="Broadcast-standard documentary films for the essential industries society runs on — aged care, healthcare, resources, energy and infrastructure. Shot on location, made to show the work as it really is.">
 <meta property="og:title" content="Authentik Studio">
-<meta property="og:description" content="Documentary films for essential industries. Broadcast craft: BBC, Apple TV+, National Geographic, Discovery.">
+<meta property="og:description" content="Documentary films for the industries society runs on. Broadcast craft: BBC, Apple TV+, National Geographic, Discovery.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,11 +81,12 @@
   /* Motion states applied ONLY when JS enhancement is active.
      Without JS or on failure, everything is fully visible. */
   .enh [data-reveal]{opacity:0;transform:translateY(30px)}
+  .enh [data-hero]{opacity:0}
   .enh [data-img] img{transform:scale(1.16)}
   .enh [data-img]{clip-path:inset(0 0 100% 0)}
   .enh .word{transform:translateY(112%)}
   @media (prefers-reduced-motion:reduce){
-    .enh [data-reveal],.enh [data-img],.enh [data-img] img,.enh .word{opacity:1!important;transform:none!important;clip-path:none!important}
+    .enh [data-reveal],.enh [data-hero],.enh [data-img],.enh [data-img] img,.enh .word{opacity:1!important;transform:none!important;clip-path:none!important}
   }
 </style>
 </head>
@@ -113,7 +114,6 @@
 
 <!-- 1. HERO — minimal text; the film carries it -->
 <section id="top" data-section style="position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#0e0b07">
-  <h1 class="sr-only">Authentik Studio — documentary films for aged care, health, and the essential industries that keep society running.</h1>
   <div id="heroMedia" aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(125% 110% at 68% 22%,#211a12 0%,#140f0a 55%,#0a0805 100%)">
     <iframe title="John W. Sullivan showreel" src="https://player.vimeo.com/video/901343199?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:max(100vw,calc(100vh * 16 / 9));height:max(100vh,calc(100vw * 9 / 16));border:0;pointer-events:none;animation:kenburns 26s ease-in-out infinite alternate"></iframe>
   </div>
@@ -125,6 +125,13 @@
   <a id="heroCap" href="https://vimeo.com/901343199" target="_blank" rel="noopener" class="mono" style="position:absolute;top:clamp(86px,11vw,128px);right:clamp(28px,7vw,140px);z-index:6;text-align:right;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,231,221,.6);line-height:1.9;text-decoration:none">
     <span style="display:inline-flex;align-items:center;gap:7px"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2.4s ease-in-out infinite"></span>Now playing</span><br>Showreel · John W. Sullivan
   </a>
+
+  <!-- hero headline (broad positioning) -->
+  <div id="heroContent" style="position:relative;z-index:6;max-width:1360px;width:100%;margin:0 auto clamp(104px,15vh,168px);padding:0 clamp(28px,7vw,140px)">
+    <h1 data-hero style="margin:0;max-width:15ch;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(2.5rem,6.6vw,6.6rem);line-height:1.0;letter-spacing:-.022em;color:#f4efe5;text-wrap:balance">The work is extraordinary. Almost no one sees it.</h1>
+    <p data-hero style="margin:clamp(24px,3vw,38px) 0 0;max-width:60ch;font-size:clamp(1.12rem,1.5vw,1.38rem);line-height:1.56;color:rgba(236,231,221,.92)">Fifteen years of BBC, Apple TV+, and National Geographic filmmaking, now pointed at the industries society runs on &mdash; aged care, healthcare, resources, and the essential operations most people never see &mdash; and the extraordinary work inside them that almost no one captures.</p>
+    <a data-hero href="https://vimeo.com/901343199" target="_blank" rel="noopener" class="mono" style="display:inline-flex;align-items:center;gap:12px;margin-top:clamp(28px,3.4vw,42px);font-size:.78rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#f4efe5;text-decoration:none;padding-bottom:7px;border-bottom:1px solid rgba(244,239,229,.4)">Watch the full reel &rarr;</a>
+  </div>
 
   <!-- bottom line: brand credits + scroll cue only -->
   <div id="heroBottom" style="position:absolute;bottom:clamp(28px,4vw,52px);left:0;right:0;z-index:6;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding:0 clamp(28px,7vw,140px)">
@@ -141,9 +148,9 @@
       <p class="serif" data-lines style="max-width:22ch;font-size:clamp(1.9rem,4.2vw,3.4rem);line-height:1.14;letter-spacing:-.018em;color:var(--ink);text-wrap:balance">The proof of good work in an essential industry lives in moments a brochure can&rsquo;t hold.</p>
       <div style="display:grid;grid-template-columns:1fr;gap:clamp(36px,4vw,56px);align-items:start;margin-top:clamp(40px,5vw,64px)">
         <div style="max-width:60ch;padding-left:clamp(0px,2vw,28px);border-left:1px solid rgba(27,24,19,.16)">
-          <p class="lede" data-reveal>The way a carer speaks to a resident. The standard held on a quiet night shift. The reason someone has stayed for twenty years.</p>
-          <p class="lede" data-reveal style="margin-top:1.4em">When that work stays invisible, two things follow. The right people don&rsquo;t apply, because they can&rsquo;t see what they&rsquo;d be joining. And the organisation gets judged on the same generic terms as everyone else, no matter how much better it actually is.</p>
-          <p class="lede" data-reveal style="margin-top:1.4em">A film changes both. It shows the work as it is, which is the strongest reputation and recruitment asset an essential organisation has, and the one almost no one bothers to capture properly.</p>
+          <p class="lede" data-reveal>The way a carer speaks to a resident. The crew that holds the line on a night shift at the mine. The reason someone has stayed for twenty years.</p>
+          <p class="lede" data-reveal style="margin-top:1.4em">When that work stays invisible, the organisation is judged on the same generic terms as everyone else &mdash; no matter how much better it actually is. The right people don&rsquo;t apply. Communities, partners, and regulators fill the gaps with assumptions. And a real advantage stays a secret.</p>
+          <p class="lede" data-reveal style="margin-top:1.4em">A film changes that. It shows the work as it is, which is the strongest trust asset an essential organisation has &mdash; the thing that earns reputation, wins the right people, and moves the business &mdash; and the one almost no one bothers to capture properly.</p>
         </div>
         <figure style="margin:0">
           <div data-img style="position:relative;aspect-ratio:16/10;width:100%;overflow:hidden;background:#0e0b07;border:1px solid rgba(27,24,19,.18)">
@@ -163,8 +170,8 @@
     <div class="marg"><div class="n">03</div><div class="l">What we make</div><div class="r"></div></div>
     <div>
       <h2 class="serif" data-lines style="margin:0;max-width:20ch;font-size:clamp(1.7rem,3.4vw,2.9rem);line-height:1.16;letter-spacing:-.016em;color:var(--ink)">We make documentary films that change how an organisation is seen.</h2>
-      <p class="lede" data-reveal style="margin-top:1.5em;max-width:56ch">For essential industries that usually starts with recruitment: we tell the real story of the work, so the right people apply. The same film keeps working long after, as the reputation asset that makes an organisation trusted by families, partners, and regulators alike.</p>
-      <p class="lede" data-reveal style="margin-top:1.3em;max-width:56ch">This is not corporate video. Every film is shot on location, built around a deliberate narrative, and made to a standard competitors cannot replicate, because they weren&rsquo;t there.</p>
+      <p class="lede" data-reveal style="margin-top:1.5em;max-width:56ch">One film does several jobs. It attracts the right people, so recruitment stops being a grind. It earns trust with the communities, partners, and regulators you answer to. And it gives the business a genuine asset it can put to work &mdash; the way a founder documentary once helped move a brand from $2M to $8M.</p>
+      <p class="lede" data-reveal style="margin-top:1.3em;max-width:56ch">This is not corporate video. Every film is shot on location, built around a deliberate narrative, and made to a standard competitors cannot replicate &mdash; because they weren&rsquo;t there.</p>
     </div>
   </div>
 </section>
@@ -246,7 +253,7 @@
     <div class="marg"><div class="n">06</div><div class="l">Selected work</div><div class="r"></div></div>
     <div>
       <p class="serif" data-lines style="margin:0;max-width:28ch;font-size:clamp(1.5rem,3vw,2.4rem);line-height:1.2;letter-spacing:-.014em;color:var(--ink);text-wrap:balance">Our work and our network&rsquo;s credits span the broadcasters and brands below.</p>
-      <p class="serif" data-reveal style="margin-top:1.4em;max-width:54ch;font-style:italic;font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.6;color:#453f38">Currently in production: recruitment and workforce documentaries in the aged-care sector.</p>
+      <p class="serif" data-reveal style="margin-top:1.4em;max-width:54ch;font-style:italic;font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.6;color:#453f38">Currently in production: workforce and reputation films in the aged-care and health sectors, with resources and infrastructure next.</p>
     </div>
   </div>
 
@@ -287,7 +294,7 @@
 
   <div class="wrap" style="margin-top:clamp(96px,12vw,160px);padding-top:clamp(32px,4vw,48px);border-top:1px solid rgba(236,231,221,.14);display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;justify-content:space-between">
     <span class="mono" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,231,221,.5)">&copy; 2011&ndash;2026 Authentik Studio</span>
-    <span class="mono" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,231,221,.5)">Documentary films for essential industries</span>
+    <span class="mono" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,231,221,.5)">Documentary films for the industries society runs on</span>
     <span class="mono" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,231,221,.36)">Site by Claude · art direction Ermo Egberts</span>
   </div>
 </section>
@@ -387,27 +394,33 @@ window.addEventListener('load', function(){
     GSAP.to(el,{opacity:1,y:0,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});
   });
 
-  /* ---- image wipe + scale ---- */
+  /* ---- image wipe + scale (with overscan so parallax never exposes edges) ---- */
   GSAP.utils.toArray('[data-img]').forEach(function(box){
-    var img=box.querySelector('img,iframe');
+    var media=box.querySelector('img,iframe');
+    var isImg = media && media.tagName === 'IMG';
     GSAP.set(box,{clipPath:'inset(0 0 100% 0)'});
-    GSAP.set(img,{scale:1.16});
     var tl=GSAP.timeline({scrollTrigger:{trigger:box,start:'top 85%'}});
-    tl.to(box,{clipPath:'inset(0 0 0% 0)',duration:1.15,ease:'power3.out'})
-      .to(img,{scale:1,duration:1.5,ease:'power3.out'},0);
-    // gentle parallax on the media inside
-    GSAP.to(img,{yPercent:-8,ease:'none',scrollTrigger:{trigger:box,start:'top bottom',end:'bottom top',scrub:true}});
+    tl.to(box,{clipPath:'inset(0 0 0% 0)',duration:1.15,ease:'power3.out'});
+    if(isImg){
+      // keep a permanent 6% overscan; parallax stays within it -> no black bars
+      GSAP.set(media,{scale:1.16});
+      tl.to(media,{scale:1.12,duration:1.5,ease:'power3.out'},0);
+      GSAP.fromTo(media,{yPercent:3},{yPercent:-3,ease:'none',scrollTrigger:{trigger:box,start:'top bottom',end:'bottom top',scrub:true}});
+    }
   });
 
   /* ---- hero parallax + fade on scroll ---- */
   var heroMedia=document.getElementById('heroMedia');
   var heroBottom=document.getElementById('heroBottom');
   var heroCap=document.getElementById('heroCap');
+  var heroContent=document.getElementById('heroContent');
   if(heroMedia){
     GSAP.to(heroMedia,{yPercent:18,ease:'none',scrollTrigger:{trigger:'#top',start:'top top',end:'bottom top',scrub:true}});
-    GSAP.to([heroBottom,heroCap],{y:-40,opacity:0,ease:'none',scrollTrigger:{trigger:'#top',start:'top top',end:'70% top',scrub:true}});
-    // load-in of hero captions
-    GSAP.from([heroCap,heroBottom],{opacity:0,y:24,duration:1.2,ease:'power3.out',delay:0.25,stagger:0.15});
+    GSAP.to([heroBottom,heroCap,heroContent],{y:-40,opacity:0,ease:'none',scrollTrigger:{trigger:'#top',start:'top top',end:'70% top',scrub:true}});
+    // load-in: headline words + captions
+    GSAP.set('[data-hero]',{opacity:0,y:26});
+    GSAP.to('[data-hero]',{opacity:1,y:0,duration:1.2,ease:'power3.out',delay:0.2,stagger:0.12});
+    GSAP.from([heroCap,heroBottom],{opacity:0,y:24,duration:1.2,ease:'power3.out',delay:0.35,stagger:0.15});
   }
 
   ST.refresh();
