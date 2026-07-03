@@ -133,6 +133,27 @@
   @media (prefers-reduced-motion:reduce){
     .enh [data-reveal],.enh [data-hero],.enh [data-img],.enh [data-img] img,.enh .word{opacity:1!important;transform:none!important;clip-path:none!important}
   }
+
+  /* ---- Mobile / small-screen hardening ---- */
+  @media (max-width:820px){
+    :root{--hero-ov:0.32}
+    /* phones: show a still instead of the Vimeo embed (autoplay is unreliable + heavy on mobile) */
+    #heroMedia iframe{display:none!important}
+    .proof{grid-template-columns:1fr!important}
+    .marg{position:static!important;margin-bottom:16px}
+  }
+  @media (max-width:720px){
+    .member{grid-template-columns:1fr!important}
+    .member [data-img]{max-width:340px}
+    .field-strip .fs{height:clamp(200px,58vw,320px)}
+  }
+  @media (max-width:600px){
+    #heroBottom{flex-direction:column;align-items:flex-start;gap:10px}
+    #heroBottom>a{display:none}
+    .section{padding-left:22px;padding-right:22px}
+    .lede{font-size:1.08rem}
+    .wrap{overflow-x:hidden}
+  }
 </style>
 </head>
 <body>
@@ -159,7 +180,7 @@
 
 <!-- 1. HERO — minimal text; the film carries it -->
 <section id="top" data-section style="position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#0e0b07">
-  <div id="heroMedia" aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(125% 110% at 68% 22%,#211a12 0%,#140f0a 55%,#0a0805 100%)">
+  <div id="heroMedia" aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(125% 110% at 68% 22%,rgba(33,26,18,.4) 0%,rgba(20,15,10,.55) 55%,rgba(10,8,5,.82) 100%),url('/assets/field2.jpg') center/cover no-repeat">
     <iframe title="John W. Sullivan showreel" src="https://player.vimeo.com/video/901343199?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:max(100vw,calc(100vh * 16 / 9));height:max(100vh,calc(100vw * 9 / 16));border:0;pointer-events:none;animation:kenburns 26s ease-in-out infinite alternate"></iframe>
   </div>
   <div aria-hidden="true" style="position:absolute;inset:0;background:#0a0806;opacity:var(--hero-ov)"></div>
@@ -267,7 +288,7 @@
         <!-- Ermo first (founder) -->
         <div class="member" style="display:grid;grid-template-columns:minmax(0,38%) 1fr;gap:clamp(28px,4vw,64px);align-items:start">
           <div data-img style="position:relative;aspect-ratio:4/5;width:100%;overflow:hidden;background:#0e0b07;border:1px solid rgba(27,24,19,.2)">
-            <img src="/assets/ermo.jpg" alt="Ermo Egberts on location" loading="eager" style="width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(.95)">
+            <img src="/assets/ermo.jpg" alt="Ermo Egberts on location" loading="eager" style="width:100%;height:100%;object-fit:cover;object-position:center 26%;filter:grayscale(1) contrast(1.05) brightness(.95)">
             <span class="mono" style="position:absolute;top:14px;left:14px;z-index:3;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(236,231,221,.78);pointer-events:none">A. Studio / 01</span>
           </div>
           <div data-reveal style="padding-top:6px">
