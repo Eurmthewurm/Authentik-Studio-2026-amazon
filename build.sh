@@ -8,6 +8,8 @@ cp sitemap.xml dist/sitemap.xml || true
 cp og.jpg dist/assets/og.jpg || true
 cp setup.mp4 dist/assets/setup.mp4 || true
 cp nurse.mp4 dist/assets/nurse.mp4 || true
+cp reel.mp4 dist/assets/reel.mp4 || true
+cp reel-poster.jpg dist/assets/reel-poster.jpg || true
 cp "john camera.jpeg" dist/assets/field1.jpg || true
 cp "john camera 2.jpeg" dist/assets/field2.jpg || true
 cp "john on set.jpeg" dist/assets/field3.jpg || true
