@@ -55,6 +55,8 @@
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;background:var(--bg)}
+  @media (max-width:1024px){html{scroll-behavior:smooth}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   body{font-family:'Geist',-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased;color:var(--ink);overflow-x:hidden}
   ::selection{background:var(--accent);color:#fff}
   a{color:inherit}
@@ -524,7 +526,10 @@ window.addEventListener('load', function(){
     document.querySelectorAll('[data-reveal]').forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(28px)'; io.observe(el); });
   }
 
-  if(!GSAP || !ST || reduce){ if(!reduce) baselineReveal(); return; }
+  // On phones/tablets & touch devices, skip Lenis + GSAP ScrollTrigger (they can stall native
+  // scrolling and leave scroll-triggered sections stuck hidden). Use the reliable IO reveal instead.
+  var mqTouch = window.matchMedia('(pointer:coarse)').matches || window.matchMedia('(max-width:1024px)').matches;
+  if(!GSAP || !ST || reduce || mqTouch){ if(!reduce) baselineReveal(); return; }
 
   // We can enhance — switch on motion states now (avoids FOUC / hidden-if-broken)
   document.documentElement.classList.add('enh');
