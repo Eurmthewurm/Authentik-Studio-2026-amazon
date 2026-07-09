@@ -5,6 +5,7 @@ cp index.html dist/index.html
 cp ermo_01.jpg dist/assets/ermo.jpg || true
 cp robots.txt dist/robots.txt || true
 cp sitemap.xml dist/sitemap.xml || true
+cp -r insights dist/insights || true
 cp og.jpg dist/assets/og.jpg || true
 cp setup.mp4 dist/assets/setup.mp4 || true
 cp nurse.mp4 dist/assets/nurse.mp4 || true
